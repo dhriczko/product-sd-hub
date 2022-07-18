@@ -7,7 +7,7 @@ spring:
       port: 27017
       database: sdhub-mongo
 keycloak:
-  auth-server-url: https://centralidp.demo.catena-x.net/auth
+  auth-server-url: https://centralidp-pen.dev.demo.catena-x.net/auth
   realm: CX-Central
   resource: Cl2-CX-Portal
   bearer-only: true
@@ -20,8 +20,8 @@ app:
     durationDays: 90
     idPrefix: http://sdhub.int.demo.catena-x.net/
   custodianWallet:
-    uri: https://managed-identity-wallets.int.demo.catena-x.net/api
-    auth-server-url: https://centralidp.demo.catena-x.net/auth
+    uri: https://managed-identity-wallets-pen.dev.demo.catena-x.net/api
+    auth-server-url: https://centralidp-pen.dev.demo.catena-x.net/auth
     realm: CX-Central
     clientId: ${CLIENTID}
     clientSecret: ${CLIENTSECRET}

@@ -11,7 +11,7 @@ app:
     version: ^project.version^
   sdhubId: BPNL000000000000
   custodianWallet:
-    uri: https://managed-identity-wallets-pen.int.demo.catena-x.net/api
+    uri: https://managed-identity-wallets-pen.dev.demo.catena-x.net/api
     auth-server-url: https://centralidp-pen.dev.demo.catena-x.net/auth
     realm: CX-Central
     clientId: ${CLIENTID}

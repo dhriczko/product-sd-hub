@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "mongo.labels" . | nindent 4 }}
 spec:
-  storageClassName: {{ .Values.persistence.storageClass }}
+  storageClassName: {{ .Values.persistence.storageClassName }}
   accessModes:
     - ReadWriteOnce
   resources:

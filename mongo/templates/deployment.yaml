@@ -41,10 +41,10 @@ spec:
     volumeClaimTemplates:
     - metadata:
       name: {{ include "mongo.fullname" . }}
-    spec:
-      accessModes:
-      - ReadWriteOnce
-      storageClassName: {{ .Values.persistence.storageClass }}
-      resources:
-        requests:
-          storage: {{ .Values.persistence.storageSize }}
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        storageClassName: {{ .Values.persistence.storageClass }}
+        resources:
+          requests:
+            storage: {{ .Values.persistence.storageSize }}

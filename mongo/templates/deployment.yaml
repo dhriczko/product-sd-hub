@@ -40,7 +40,7 @@ spec:
               mountPath: /data/db
         volumeClaimTemplates:
         - metadata:
-          name: {{ include "mongo.fullname" . }}
+          name: {{- include "mongo.fullname" . }}
         spec:
           accessModes:
           - ReadWriteOnce

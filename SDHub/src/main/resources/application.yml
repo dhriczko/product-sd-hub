@@ -3,7 +3,7 @@ server:
 spring:
   data:
     mongodb:
-      host:  mongodb-sdhub
+      host:  mongodb-sdhub-pen
       port: 27017
       database: sdhub-mongo
 app:

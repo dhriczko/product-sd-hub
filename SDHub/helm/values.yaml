@@ -1,6 +1,6 @@
 image: "ghcr.io/catenax-ng/product-sd-hub/sdhub:sdhub-pen"
 domain: "sdhub-pen.int.demo.catena-x.net"
-name: "sdhub"
+name: "sdhub-pen"
 portContainer: 8080
 portService: 80
 replicaCount: 1

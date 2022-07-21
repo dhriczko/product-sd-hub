@@ -127,7 +127,7 @@ ingresses:
   ## Public / Internet facing Ingress
   - enabled: true
     # -- The hostname to be used to precisely map incoming traffic onto the underlying network service
-    hostname: "edc-dataplane.local"
+    hostname: "edc-dataplane.pen"
     # -- Additional ingress annotations to add
     annotations: {}
     # -- EDC endpoints exposed by this ingress resource

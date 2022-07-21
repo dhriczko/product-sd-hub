@@ -231,13 +231,15 @@ logging:
 opentelemetry:
   # -- opentelemetry.properties configuring the [opentelemetry agent](https://opentelemetry.io/docs/instrumentation/java/automatic/agent-config/)
   properties: |-
-    otel.javaagent.enabled=true
+    otel.javaagent.enabled=false
     otel.javaagent.debug=false
 
 configuration:
   # -- EDC configuration.properties configuring aspects of the [eclipse-dataspaceconnector](https://github.com/eclipse-dataspaceconnector/DataSpaceConnector)
   properties: |-
     edc.api.auth.key=password
+    edc.api.control.auth.apikey.key=X-Api-Key
+    edc.api.control.auth.apikey.value=pass
     edc.ids.catalog.id=urn:catalog:default
     # edc.ids.curator=http://20.113.137.169
     edc.ids.description=Eclipse Dataspace Connector
@@ -250,23 +252,23 @@ configuration:
     # DAPS Properties
     edc.oauth.client.id=FF:C5:79:CC:88:F3:BD:07:08:30:4A:18:95:FA:65:22:0F:92:A8:7D:keyid:FF:C5:79:CC:88:F3:BD:07:08:30:4A:18:95:FA:65:22:0F:92:A8:7D
     edc.oauth.provider.audience=idsc:IDS_CONNECTORS_ALL
-    edc.oauth.provider.jwks.url=http://cxtsiintakssrv.germanywestcentral.cloudapp.azure.com/.well-known/jwks.json       ###DAPS IP
-    edc.oauth.token.url=http://cxtsiintakssrv.germanywestcentral.cloudapp.azure.com/token          ###DAPS IP
+    edc.oauth.provider.jwks.url=https://daps-pen.int.demo.catena-x.net/.well-known/jwks.json
+    edc.oauth.token.url=https://daps-pen.int.demo.catena-x.net/token
     # OAUTH Properties
-    edc.oauth.public.key.alias=int-daps-cert
-    edc.oauth.private.key.alias=int-daps-key
+    edc.oauth.public.key.alias=pen-daps-cert
+    edc.oauth.private.key.alias=pen-daps-key
 
     edc.transfer.dataplane.sync.endpoint=http://edc-dataplane-provider:9191/public
     edc.transfer.proxy.endpoint=http://edc-dataplane-provider:8185/public
-    edc.transfer.proxy.token.verifier.publickey.alias=int-data-plane-public-key
-    edc.transfer.proxy.token.signer.privatekey.alias=int-data-plane-private-key
-    edc.public.key.alias=int-data-plane-public-key
+    edc.transfer.proxy.token.verifier.publickey.alias=pen-data-plane-public-key
+    edc.transfer.proxy.token.signer.privatekey.alias=pen-data-plane-private-key
+    edc.public.key.alias=pen-data-plane-public-key
     # Azure vault related configuration
     edc.vault.clientid=fbedd445-6aa2-48cb-a855-0f62a28f923c
     edc.vault.clientsecret=K65PAD3xzGUECJ2ybo6C_pjAVIUd4H.M~p
     edc.vault.name=edc1vault
     edc.vault.tenantid=495463c3-0991-4659-9cc5-94b4a3f7b1d6
-
+    edc.receiver.http.endpoint=http://192.168.1.45:10092/edc-backend/api/v1/public
 
     #  Postgresql related configuration
     edc.datasource.asset.name=asset
@@ -366,7 +368,6 @@ configuration:
     # edc.oauth.validation.nbf.leeway=
     # edc.receiver.http.auth-code=
     # edc.receiver.http.auth-key=
-    edc.receiver.http.endpoint=http://192.168.1.45:10092/edc-backend/api/v1/public
     # edc.transfer.proxy.endpoint=
     # edc.transfer.dataplane.sync.token.validity=
     # edc.transfer.proxy.token.signer.privatekey.alias=

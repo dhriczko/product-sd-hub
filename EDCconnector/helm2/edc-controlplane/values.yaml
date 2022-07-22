@@ -248,7 +248,7 @@ configuration:
     # edc.ids.maintainer=http://20.113.137.169
     edc.ids.security.profile=base
     edc.ids.title=Eclipse Dataspace Connector
-    ids.webhook.address=http://edc-controlplane.pen:8282
+    ids.webhook.address=http://edc-controlplane-consumer.pen:8282
     # DAPS Properties
     edc.oauth.client.id=1C:34:19:5A:52:7B:85:29:CA:2E:33:27:A8:70:3A:FE:4B:D4:1D:1B:keyid:1C:34:19:5A:52:7B:85:29:CA:2E:33:27:A8:70:3A:FE:4B:D4:1D:1B
     edc.oauth.provider.audience=idsc:IDS_CONNECTORS_ALL

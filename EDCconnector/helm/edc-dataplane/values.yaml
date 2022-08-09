@@ -127,7 +127,7 @@ ingresses:
   ## Public / Internet facing Ingress
   - enabled: true
     # -- The hostname to be used to precisely map incoming traffic onto the underlying network service
-    hostname: "edc-dataplane-provider.pen"
+    hostname: "edc-dp-provider-pen.int.demo.catena-x.net"
     # -- Additional ingress annotations to add
     annotations: {}
     # -- EDC endpoints exposed by this ingress resource
@@ -204,7 +204,7 @@ opentelemetry:
 configuration:
   # -- EDC configuration.properties configuring aspects of the [eclipse-dataspaceconnector](https://github.com/eclipse-dataspaceconnector/DataSpaceConnector)
   properties: |-
-    edc.controlplane.validation-endpoint=http://edc-controlplane-provider.pen:8182/validation/token
+    edc.controlplane.validation-endpoint=http://edc-cp-provider-pen.int.demo.catena-x.net:8182/validation/token
     edc.hostname=localhost
     edc.vault.clientid=fbedd445-6aa2-48cb-a855-0f62a28f923c
     edc.vault.clientsecret=K65PAD3xzGUECJ2ybo6C_pjAVIUd4H.M~p

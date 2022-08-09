@@ -139,7 +139,7 @@ ingresses:
   ## Public / Internet facing Ingress
   - enabled: true
     # -- The hostname to be used to precisely map incoming traffic onto the underlying network service
-    hostname: "edc-controlplane-provider.pen"
+    hostname: "edc-cp-provider-pen.int.demo.catena-x.net"
     # -- Additional ingress annotations to add
     annotations: {}
     # -- EDC endpoints exposed by this ingress resource
@@ -248,7 +248,7 @@ configuration:
     # edc.ids.maintainer=http://20.113.137.169
     edc.ids.security.profile=base
     edc.ids.title=Eclipse Dataspace Connector
-    ids.webhook.address=http://edc-controlplane-provider.pen:8282
+    ids.webhook.address=http://edc-cp-provider-pen.int.demo.catena-x.net:8282
     # DAPS Properties
     edc.oauth.client.id=91:FA:BA:3A:13:B3:72:DC:FF:08:9F:DC:33:AE:8C:66:04:BF:BD:50:keyid:91:FA:BA:3A:13:B3:72:DC:FF:08:9F:DC:33:AE:8C:66:04:BF:BD:50
     edc.oauth.provider.audience=idsc:IDS_CONNECTORS_ALL
@@ -258,8 +258,8 @@ configuration:
     edc.oauth.public.key.alias=edc-controlplane-provider-pen-cert
     edc.oauth.private.key.alias=edc-controlplane-provider-pen-key
 
-    edc.transfer.dataplane.sync.endpoint=http://edc-dataplane-provider.pen:9191/public
-    edc.transfer.proxy.endpoint=http://edc-dataplane-provider.pen:8185/public
+    edc.transfer.dataplane.sync.endpoint=http://edc-dp-provider-pen.int.demo.catena-x.net:9191/public
+    edc.transfer.proxy.endpoint=http://edc-dp-provider-pen.int.demo.catena-x.net:8185/public
     edc.transfer.proxy.token.verifier.publickey.alias=pen-data-plane-public-key
     edc.transfer.proxy.token.signer.privatekey.alias=pen-data-plane-private-key
     edc.public.key.alias=pen-data-plane-public-key

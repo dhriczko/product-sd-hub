@@ -52,9 +52,7 @@ spec:
     - host: {{ .hostname }}
       http:
         paths:
-          {{- $ingressEdcEndpoints := .endpoints }}
           {{- range  $name, $mapping := $edcEndpoints }}
-          {{- if (has $name $ingressEdcEndpoints) }}
           - path: {{ $mapping.path }}
             pathType: Prefix
             backend:

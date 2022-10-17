@@ -51,4 +51,4 @@ ingresses:
 
 secret:
   dbSecretName: cons-db-secrets
-  vaultsecretName: cons-vault-cp-secret
+  vaultSecretName: cons-vault-cp-secret

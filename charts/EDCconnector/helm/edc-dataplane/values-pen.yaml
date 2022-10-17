@@ -26,4 +26,4 @@ ingresses:
 
 
 secret:
-  vaultsecretName: vault-dp-secret
+  vaultSecretName: vault-dp-secret

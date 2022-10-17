@@ -137,7 +137,7 @@ service:
 ## Ingress declaration to expose the network service.
 ingresses:
   ## Public / Internet facing Ingress
-  - enabled: true
+  - enabled: false
     # -- The hostname to be used to precisely map incoming traffic onto the underlying network service
     hostname: "edc-cp-prv-pen.int.demo.catena-x.net"
     # -- Additional ingress annotations to add

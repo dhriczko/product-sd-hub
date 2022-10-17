@@ -139,7 +139,7 @@ ingresses:
   ## Public / Internet facing Ingress
   - enabled: false
     # -- The hostname to be used to precisely map incoming traffic onto the underlying network service
-    hostname: "edc-cp-cons-pen.int.demo.catena-x.net"
+    hostname: "edc-cp-prv-pen.int.demo.catena-x.net"
     # -- Additional ingress annotations to add
     annotations:
       nginx.ingress.kubernetes.io/use-regex: "true"
@@ -222,13 +222,8 @@ affinity: {}
 #     -Dhttp.proxyHost=proxy -Dhttp.proxyPort=80 -Dhttp.nonProxyHosts="localhost|127.*|[::1]" -Dhttps.proxyHost=proxy -Dhttps.proxyPort=443
 env: {}
 
-secret:
-  dbSecretName: ""
-  vaultSecretName: ""
-  
-  
 postgresql:
-  enabled: true
+  enabled: false
   auth:
     username: "edcUser"
     database: "edcdb"
@@ -237,7 +232,9 @@ postgresql:
         adminPasswordKey: "postgres-password"
         userPasswordKey: "password"
         
-
+secret:
+  dbSecretName: ""
+  vaultSecretName: ""
 
 logging:
   # -- EDC logging.properties configuring the [java.util.logging subsystem](https://docs.oracle.com/javase/7/docs/technotes/guides/logging/overview.html#a1.8)
@@ -281,9 +278,9 @@ configuration:
     edc.oauth.private.key.alias=edc-cp-consumer-pen-key
     edc.transfer.dataplane.sync.endpoint=http://edc-dp-cons-pen.int.demo.catena-x.net/public
     edc.transfer.proxy.endpoint=http://edc-dp-cons-pen.int.demo.catena-x.net/public
-    edc.transfer.proxy.token.verifier.publickey.alias=pen-data-plane-public-key
-    edc.transfer.proxy.token.signer.privatekey.alias=pen-data-plane-private-key
-    edc.public.key.alias=pen-data-plane-public-key
+    edc.transfer.proxy.token.verifier.publickey.alias=pen-consumer-data-plane-public-key
+    edc.transfer.proxy.token.signer.privatekey.alias=pen-consumer-data-plane-private-key
+    edc.public.key.alias=pen-consumer-data-plane-public-key
     edc.vault.hashicorp.url=
     edc.vault.hashicorp.token=
     edc.vault.hashicorp.timeout.seconds=30

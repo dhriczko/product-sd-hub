@@ -46,9 +46,17 @@ ingresses:
       clusterIssuer: ""
 
 
-
-
-
 secret:
   dbSecretName: cons-db-secrets
   vaultSecretName: cons-vault-cp-secret
+
+postgresql:
+  enabled: true
+  auth:
+    username: "edcUser"
+    database: "edcdb"
+    existingSecret: cons-db-secrets
+    secretKeys:
+        adminPasswordKey: "postgres-password"
+        userPasswordKey: "password"
+        

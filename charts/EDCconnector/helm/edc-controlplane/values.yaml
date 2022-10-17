@@ -223,7 +223,7 @@ affinity: {}
 env: {}
 
 postgresql:
-  enabled: true
+  enabled: false
   auth:
     username: "edcUser"
     database: "edcdb"
@@ -232,7 +232,7 @@ postgresql:
         adminPasswordKey: "postgres-password"
         userPasswordKey: "password"
         
-
+        
 logging:
   # -- EDC logging.properties configuring the [java.util.logging subsystem](https://docs.oracle.com/javase/7/docs/technotes/guides/logging/overview.html#a1.8)
   properties: |-

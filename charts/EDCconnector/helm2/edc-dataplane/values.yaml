@@ -125,7 +125,7 @@ service:
 ## Ingress declaration to expose the network service.
 ingresses:
   ## Public / Internet facing Ingress
-  - enabled: true
+  - enabled: false
     # -- The hostname to be used to precisely map incoming traffic onto the underlying network service
     hostname: "edc-dp-cons-pen.int.demo.catena-x.net"
     # -- Additional ingress annotations to add
@@ -188,6 +188,9 @@ affinity: {}
 #   JAVA_TOOL_OPTIONS: >
 #     -Dhttp.proxyHost=proxy -Dhttp.proxyPort=80 -Dhttp.nonProxyHosts="localhost|127.*|[::1]" -Dhttps.proxyHost=proxy -Dhttps.proxyPort=443
 env: {}
+
+secret:
+  vaultSecretName: ""
 
 logging:
   # -- EDC logging.properties configuring the [java.util.logging subsystem](https://docs.oracle.com/javase/7/docs/technotes/guides/logging/overview.html#a1.8)

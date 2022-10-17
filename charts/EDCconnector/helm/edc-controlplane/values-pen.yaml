@@ -49,3 +49,14 @@ ingresses:
 secret:
   dbSecretName: db-secrets
   vaultSecretName: vault-cp-secret
+
+postgresql:
+  enabled: true
+  auth:
+    username: "edcUser"
+    database: "edcdb"
+    existingSecret: db-secrets
+    secretKeys:
+        adminPasswordKey: "postgres-password"
+        userPasswordKey: "password"
+        

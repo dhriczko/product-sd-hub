@@ -48,4 +48,4 @@ ingresses:
 
 secret:
   dbSecretName: db-secrets
-  vaultsecretName: vault-cp-secret
+  vaultSecretName: vault-cp-secret

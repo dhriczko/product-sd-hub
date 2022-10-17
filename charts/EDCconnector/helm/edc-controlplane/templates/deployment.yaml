@@ -66,77 +66,77 @@ spec:
             - name: EDC_DATASOURCE_ASSET_URL
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dburl
             - name: EDC_DATASOURCE_ASSET_USER
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dbuser
             - name: EDC_DATASOURCE_ASSET_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: password
             - name: EDC_DATASOURCE_CONTRACTDEFINITION_URL
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dburl
             - name: EDC_DATASOURCE_CONTRACTDEFINITION_USER
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dbuser
             - name: EDC_DATASOURCE_CONTRACTDEFINITION_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: password
             - name: EDC_DATASOURCE_CONTRACTNEGOTIATION_URL
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dburl
             - name: EDC_DATASOURCE_CONTRACTNEGOTIATION_USER
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dbuser
             - name: EDC_DATASOURCE_CONTRACTNEGOTIATION_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: password
             - name: EDC_DATASOURCE_POLICY_URL
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dburl
             - name: EDC_DATASOURCE_POLICY_USER
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dbuser
             - name: EDC_DATASOURCE_POLICY_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: password
             - name: EDC_DATASOURCE_TRANSFERPROCESS_URL
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dburl
             - name: EDC_DATASOURCE_TRANSFERPROCESS_USER
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: dbuser
             - name: EDC_DATASOURCE_TRANSFERPROCESS_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: {{ .Values.secret.dbSecretName}}
                   key: password
             - name: EDC_VAULT_HASHICORP_URL
               valueFrom:

@@ -138,16 +138,16 @@ spec:
                 secretKeyRef:
                   name: db-secrets
                   key: password
-            - name: EDC_VAULT_HASHICORP_URL
-              valueFrom:
-                secretKeyRef:
-                  name: vault-cp-secret
-                  key: vaulturl
-            - name: EDC_VAULT_HASHICORP_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: vault-cp-secret
-                  key: vaulttoken
+            #- name: EDC_VAULT_HASHICORP_URL
+            #  valueFrom:
+            #    secretKeyRef:
+            #      name: vault-cp-secret
+            #      key: vaulturl
+            #- name: EDC_VAULT_HASHICORP_TOKEN
+            #  valueFrom:
+            #    secretKeyRef:
+            #      name: vault-cp-secret
+            #      key: vaulttoken
 
                                  
           {{- if .Values.livenessProbe.enabled }}

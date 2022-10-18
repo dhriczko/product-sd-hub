@@ -222,6 +222,11 @@ affinity: {}
 #     -Dhttp.proxyHost=proxy -Dhttp.proxyPort=80 -Dhttp.nonProxyHosts="localhost|127.*|[::1]" -Dhttps.proxyHost=proxy -Dhttps.proxyPort=443
 env: {}
 
+
+secret:
+  dbSecretName: db-secrets
+  vaultSecretName: vault-cp-secret
+  
 postgresql:
   enabled: false
   auth:

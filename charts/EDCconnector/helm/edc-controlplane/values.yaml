@@ -278,10 +278,10 @@ configuration:
     edc.transfer.proxy.token.verifier.publickey.alias=pen-data-plane-public-key
     edc.transfer.proxy.token.signer.privatekey.alias=pen-data-plane-private-key
     edc.public.key.alias=pen-data-plane-public-key
-    edc.vault.hashicorp.url=https://vault.cx.dih-cloud.com/
-    edc.vault.hashicorp.token=hvs.Xm008gacVljiT7aLLJK0bJpO
+    edc.vault.hashicorp.url=https://vault.demo.catena-x.net
+    edc.vault.hashicorp.token=s.gjhZx6ptl7cjBDCTGiMAcwTQ
     edc.vault.hashicorp.timeout.seconds=30
-    edc.vault.hashicorp.api.secret.path=/v1/secret/data
+    edc.vault.hashicorp.api.secret.path=/v1/essential-services/data
     edc.vault.hashicorp.health.check.standby.ok=true
     edc.receiver.http.endpoint=http://192.168.1.45:10092/edc-backend/api/v1/public
     # Azure vault related configuration

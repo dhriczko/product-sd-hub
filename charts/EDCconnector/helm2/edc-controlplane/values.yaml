@@ -222,19 +222,22 @@ affinity: {}
 #     -Dhttp.proxyHost=proxy -Dhttp.proxyPort=80 -Dhttp.nonProxyHosts="localhost|127.*|[::1]" -Dhttps.proxyHost=proxy -Dhttps.proxyPort=443
 env: {}
 
+
+secret:
+  dbSecretName: cons-db-secrets
+  vaultSecretName: cons-vault-cp-secret
+  
+  
 postgresql:
   enabled: false
   auth:
     username: "edcUser"
     database: "edcdb"
-    existingSecret: db-secrets
+    existingSecret: cons-db-secrets
     secretKeys:
         adminPasswordKey: "postgres-password"
         userPasswordKey: "password"
         
-secret:
-  dbSecretName: ""
-  vaultSecretName: ""
 
 logging:
   # -- EDC logging.properties configuring the [java.util.logging subsystem](https://docs.oracle.com/javase/7/docs/technotes/guides/logging/overview.html#a1.8)

@@ -112,11 +112,11 @@ edc:
       # -- The path mapping the "validation" api is going to be exposed at
       path: /validation
     ## Control API
-    #control:
+    control:
       # -- The network port, which the "control" api is going to be exposed by the container, pod and service
-      #port: "9999"
+      port: "9999"
       # -- The path mapping the "control" api is going to be exposed at
-      #path: /api/controlplane/control
+      path: /api/controlplane/control
     ## IDS endpoints
     ids:
       # -- The network port, which the "ids" multipart api is going to be exposed by the container, pod and service
@@ -139,7 +139,7 @@ ingresses:
   ## Public / Internet facing Ingress
   - enabled: true
     # -- The hostname to be used to precisely map incoming traffic onto the underlying network service
-    hostname: "edc-cp-prv-pen.int.demo.catena-x.net"
+    hostname: "edc-cp-cons-pen.int.demo.catena-x.net"
     # -- Additional ingress annotations to add
     annotations:
       nginx.ingress.kubernetes.io/use-regex: "true"

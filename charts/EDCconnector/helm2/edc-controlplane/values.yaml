@@ -137,7 +137,7 @@ service:
 ## Ingress declaration to expose the network service.
 ingresses:
   ## Public / Internet facing Ingress
-  - enabled: false
+  - enabled: true
     # -- The hostname to be used to precisely map incoming traffic onto the underlying network service
     hostname: "edc-cp-prv-pen.int.demo.catena-x.net"
     # -- Additional ingress annotations to add
@@ -229,7 +229,7 @@ secret:
   
   
 postgresql:
-  enabled: false
+  enabled: true
   auth:
     username: "edcUser"
     database: "edcdb"
@@ -284,8 +284,8 @@ configuration:
     edc.transfer.proxy.token.verifier.publickey.alias=pen-consumer-data-plane-public-key
     edc.transfer.proxy.token.signer.privatekey.alias=pen-consumer-data-plane-private-key
     edc.public.key.alias=pen-consumer-data-plane-public-key
-    edc.vault.hashicorp.url=
-    edc.vault.hashicorp.token=
+    edc.vault.hashicorp.url=https://vault.demo.catena-x.net
+    edc.vault.hashicorp.token=s.gjhZx6ptl7cjBDCTGiMAcwTQ
     edc.vault.hashicorp.timeout.seconds=30
     edc.vault.hashicorp.api.secret.path=/v1/essential-services/data
     edc.vault.hashicorp.health.check.standby.ok=true

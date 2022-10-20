@@ -22,7 +22,7 @@ name: trivyfactoryscan
 on:
   push:
     branches:
-      - main
+      - veracodeFixes
   pull_request:
 jobs:
   build:
